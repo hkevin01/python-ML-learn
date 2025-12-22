@@ -4,6 +4,88 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.11.0] - 2025-07-09
+
+### Added
+- **Phase 7: Computer Vision Module**
+  - Complete Computer Vision curriculum with 5 notebooks
+  - torchvision 0.24.1+cpu with modern transforms.v2 API
+
+- **Image Fundamentals** (`06-computer-vision/01_image_fundamentals.ipynb`)
+  - ~20-cell comprehensive notebook
+  - Image as tensors (C, H, W format)
+  - torchvision.io.decode_image loading
+  - transforms.v2 API (Resize, Crop, Flip, ColorJitter)
+  - AutoAugment, RandAugment, TrivialAugment
+  - CutMix and MixUp data augmentation
+  - Custom Dataset implementation
+  - DataLoader with batching
+
+- **CNN Architectures** (`06-computer-vision/02_cnn_architectures.ipynb`)
+  - ~18-cell comprehensive notebook
+  - VGG blocks implementation
+  - ResNet skip connections (BasicBlock, Bottleneck)
+  - Squeeze-and-Excitation blocks
+  - MBConv (EfficientNet building block)
+  - Depthwise separable convolutions
+  - Pre-trained model loading with Weights API
+  - Activation visualization with hooks
+  - Parameter counting utilities
+
+- **Transfer Learning** (`06-computer-vision/03_transfer_learning.ipynb`)
+  - ~20-cell comprehensive notebook
+  - Feature extraction (freeze backbone)
+  - Fine-tuning (partial and full)
+  - Gradual unfreezing strategy
+  - Differential learning rates
+  - EfficientNet classifier replacement
+  - Learning rate finder implementation
+  - Best practices summary
+
+- **Object Detection** (`06-computer-vision/04_object_detection.ipynb`)
+  - ~18-cell comprehensive notebook
+  - Faster R-CNN with ResNet-50 FPN V2
+  - Faster R-CNN with MobileNet V3 (lightweight)
+  - Bounding box format [x1, y1, x2, y2]
+  - IoU (Intersection over Union) computation
+  - NMS (Non-Maximum Suppression)
+  - Model benchmarking
+  - Detection metrics (mAP, AP@IoU)
+  - torchvision.utils.draw_bounding_boxes
+
+- **Image Segmentation** (`06-computer-vision/05_image_segmentation.ipynb`)
+  - ~20-cell comprehensive notebook
+  - Semantic segmentation with DeepLabV3
+  - FCN (Fully Convolutional Network)
+  - Instance segmentation with Mask R-CNN
+  - Segmentation mask visualization
+  - Dice coefficient computation
+  - mIoU metric explanation
+  - Model speed comparison
+
+- **Computer Vision Helper Module** (`src/ml_core/computer_vision.py`)
+  - 16 helper functions for CV tasks
+  - load_image, image_to_tensor, tensor_to_image
+  - get_imagenet_stats
+  - get_train_transforms, get_val_transforms
+  - count_parameters, freeze_backbone, set_trainable_layers
+  - compute_iou, compute_dice, compute_mask_iou
+  - ImageFolderDataset class
+  - create_data_loaders
+  - denormalize_image, make_grid
+
+- **Computer Vision Unit Tests** (`tests/unit/test_computer_vision.py`)
+  - 63 comprehensive unit tests
+  - Tests for all CV helper functions
+  - Integration tests for data pipelines
+  - Edge case handling
+
+### Changed
+- Total tests: 299 → 362 (+63 tests)
+- Phase 7 marked as complete in project-plan.md
+
+---
+
 ## [1.10.0] - 2025-07-08
 
 ### Added

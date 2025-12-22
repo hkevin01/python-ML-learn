@@ -9,8 +9,8 @@
 | **Target Audience**       | Self-learners, career switchers, students, and educators                                        |
 | **Timeline**              | 26-week progressive curriculum                                                                  |
 | **Total Estimated Hours** | 560+ hours                                                                                      |
-| **Current Status**        | ✅ Phase 6 Complete                                                                              |
-| **Last Updated**          | July 8, 2025                                                                                    |
+| **Current Status**        | ✅ Phase 7 Complete                                                                              |
+| **Last Updated**          | July 9, 2025                                                                                    |
 
 ---
 
@@ -655,13 +655,35 @@ Create comprehensive NLP learning materials covering text processing, embeddings
 
 ## 👁️ Phase 7: Computer Vision
 
-| Attribute          | Value         |
-| ------------------ | ------------- |
-| **Priority**       | 🟡 Medium      |
-| **Timeline**       | Weeks 17-19   |
-| **Status**         | ⭕ Not Started |
-| **Dependencies**   | Phase 5       |
-| **Estimated Time** | 70 hours      |
+| Attribute          | Value       |
+| ------------------ | ----------- |
+| **Priority**       | 🟡 Medium    |
+| **Timeline**       | Weeks 17-19 |
+| **Status**         | ✅ Complete  |
+| **Dependencies**   | Phase 5     |
+| **Estimated Time** | 70 hours    |
+
+### Completed Work
+
+#### Notebooks Created (5)
+- `01_image_fundamentals.ipynb` - Image representation, transforms.v2, augmentation, CutMix/MixUp
+- `02_cnn_architectures.ipynb` - VGG, ResNet, EfficientNet, MobileNet, activation visualization
+- `03_transfer_learning.ipynb` - Feature extraction, fine-tuning, gradual unfreezing, LR finder
+- `04_object_detection.ipynb` - Faster R-CNN, bounding boxes, IoU, NMS, model benchmarking
+- `05_image_segmentation.ipynb` - DeepLabV3, FCN, Mask R-CNN, semantic vs instance segmentation
+
+#### Helper Module
+- `src/ml_core/computer_vision.py` - 16 functions for image processing, transforms, model utilities, metrics
+
+#### Test Coverage
+- `tests/unit/test_computer_vision.py` - 63 comprehensive tests
+
+#### Key Outcomes
+- ✅ Modern torchvision.transforms.v2 API throughout
+- ✅ Pre-trained model weights API (Weights enum)
+- ✅ Detection metrics (IoU, mAP) explained
+- ✅ Segmentation metrics (Dice, mIoU) implemented
+- ✅ 362 total tests passing
 
 ---
 
@@ -729,8 +751,8 @@ Create comprehensive NLP learning materials covering text processing, embeddings
 | M3: Supervised Learning     | Week 8  | ✅ Complete    | ████████████ 100% |
 | M4: Unsupervised Learning   | Week 10 | ✅ Complete    | ████████████ 100% |
 | M5: Deep Learning Basics    | Week 13 | ✅ Complete    | ████████████ 100% |
-| M6: NLP Mastery             | Week 16 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
-| M7: Computer Vision         | Week 19 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
+| M6: NLP Mastery             | Week 16 | ✅ Complete    | ████████████ 100% |
+| M7: Computer Vision         | Week 19 | ✅ Complete    | ████████████ 100% |
 | M8: Projects Complete       | Week 24 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
 | M9: MLOps & Deployment      | Week 26 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
 
@@ -745,8 +767,8 @@ Create comprehensive NLP learning materials covering text processing, embeddings
 | Phase 3: Supervised Learning   | 80              | ✅ Complete    |
 | Phase 4: Unsupervised Learning | 50              | ✅ Complete    |
 | Phase 5: Deep Learning         | 90              | ✅ Complete    |
-| Phase 6: NLP                   | 70              | ⭕ Not Started |
-| Phase 7: Computer Vision       | 70              | ⭕ Not Started |
+| Phase 6: NLP                   | 70              | ✅ Complete    |
+| Phase 7: Computer Vision       | 70              | ✅ Complete    |
 | Phase 8: Projects              | 100+            | ⭕ Not Started |
 | Phase 9: MLOps                 | 40              | ⭕ Not Started |
 | **Total**                      | **560+ hours**  | -             |
@@ -797,7 +819,7 @@ Create comprehensive NLP learning materials covering text processing, embeddings
 
 ---
 
-**Last Updated**: December 22, 2025
-**Next Review**: December 29, 2025
+**Last Updated**: July 9, 2025
+**Next Review**: July 16, 2025
 **Project Owner**: Kevin
-**Version**: 1.2.0
+**Version**: 1.3.0
