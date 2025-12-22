@@ -19,6 +19,18 @@ from .supervised import (
     plot_roc_curves,
     plot_validation_curve,
 )
+from .unsupervised import (
+    assign_cluster_to_new_data,
+    compare_clustering_algorithms,
+    detect_anomalies_iqr,
+    detect_anomalies_zscore,
+    evaluate_clustering,
+    find_optimal_clusters,
+    find_optimal_dbscan_params,
+    get_cluster_summary,
+    get_pca_loadings,
+    get_pca_variance_analysis,
+)
 
 __all__ = [
     # Supervised Learning
@@ -30,4 +42,15 @@ __all__ = [
     "get_feature_importance_df",
     "compare_models",
     "create_baseline_models",
+    # Unsupervised Learning
+    "find_optimal_clusters",
+    "evaluate_clustering",
+    "compare_clustering_algorithms",
+    "find_optimal_dbscan_params",
+    "get_pca_variance_analysis",
+    "get_pca_loadings",
+    "detect_anomalies_zscore",
+    "detect_anomalies_iqr",
+    "get_cluster_summary",
+    "assign_cluster_to_new_data",
 ]
