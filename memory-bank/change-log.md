@@ -1,6 +1,57 @@
 # Change Log
 
-## v1.4.0 - Data Visualization Module (Current)
+## v2.0.0 - Project Complete: MLOps & Production (Current)
+**Date**: December 22, 2025
+
+### 🎉 PROJECT MILESTONE: COMPLETE!
+This release marks the completion of the entire 9-phase machine learning study guide curriculum.
+
+### Added - Phase 9: MLOps & Production
+- `08-mlops/01_model_serving_fastapi.ipynb` - REST API model serving
+  - FastAPI application structure
+  - Pydantic request/response validation
+  - ModelManager class for loading/inference
+  - Health checks, batch predictions, benchmarking
+- `08-mlops/02_docker_containerization.ipynb` - Docker for ML
+  - Basic, multi-stage, and GPU Dockerfiles
+  - docker-compose.yml configuration
+  - Optimization techniques
+- `08-mlops/03_experiment_tracking.ipynb` - Experiment management
+  - ExperimentTracker class (params, metrics, artifacts)
+  - ModelRegistry with versioning and stage transitions
+  - Experiment comparison utilities
+- `08-mlops/04_cicd_pipelines.ipynb` - Automated pipelines
+  - GitHub Actions workflows (test, train, deploy)
+  - Model validation scripts
+  - Pre-commit configuration
+- `08-mlops/05_model_monitoring.ipynb` - Production monitoring
+  - PredictionLogger for tracking predictions
+  - DriftDetector with KS test for data drift
+  - PerformanceMonitor for metrics tracking
+  - AlertManager with severity levels
+  - ModelMonitor comprehensive system
+
+### Project Statistics
+- **Total Notebooks**: 38
+- **Total Tests**: 362 passing
+- **Phases Completed**: 9/9 (100%)
+- **Estimated Study Hours**: 560+
+
+---
+
+## v1.9.0 - End-to-End Projects Complete
+**Date**: December 22, 2025
+
+### Added - Phase 8: End-to-End Projects
+- `07-projects/01_house_price_prediction.ipynb` - Regression project
+- `07-projects/02_customer_churn_prediction.ipynb` - Classification with imbalanced data
+- `07-projects/03_image_classification_app.ipynb` - Computer vision project
+- `07-projects/04_sentiment_analysis_pipeline.ipynb` - NLP classification
+- `07-projects/05_recommendation_system.ipynb` - Collaborative/content filtering
+
+---
+
+## v1.4.0 - Data Visualization Module
 **Date**: $(date +%Y-%m-%d)
 
 ### Added
