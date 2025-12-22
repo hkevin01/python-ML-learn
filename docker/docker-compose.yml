@@ -1,0 +1,85 @@
+# =============================================================================
+# Docker Compose Configuration for ML Study Guide
+# =============================================================================
+# Purpose: Orchestrate ML development environment with optional services
+# Usage:
+#   docker-compose up -d          # Start all services
+#   docker-compose up ml-lab      # Start only Jupyter Lab
+#   docker-compose down           # Stop all services
+#   docker-compose logs -f        # View logs
+# =============================================================================
+
+version: '3.8'
+
+services:
+  # ---------------------------------------------------------------------------
+  # Main ML Development Environment
+  # ---------------------------------------------------------------------------
+  # Primary service for running Jupyter notebooks and ML experiments
+  # ---------------------------------------------------------------------------
+  ml-lab:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ml-study-guide
+    ports:
+      - "8888:8888"  # Jupyter Lab
+      - "6006:6006"  # TensorBoard (optional)
+    volumes:
+      # Mount source code for live editing
+      - ../src:/app/src
+      # Mount notebooks for persistence
+      - ../01-fundamentals:/app/01-fundamentals
+      - ../02-supervised-learning:/app/02-supervised-learning
+      - ../03-unsupervised-learning:/app/03-unsupervised-learning
+      - ../04-deep-learning:/app/04-deep-learning
+      - ../05-nlp:/app/05-nlp
+      - ../06-computer-vision:/app/06-computer-vision
+      - ../07-projects:/app/07-projects
+      # Mount data and datasets
+      - ../data:/app/data
+      - ../datasets:/app/datasets
+      # Mount tests
+      - ../tests:/app/tests
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - PYTHONPATH=/app/src
+    restart: unless-stopped
+    # Resource limits to prevent runaway processes
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+        reservations:
+          memory: 2G
+
+  # ---------------------------------------------------------------------------
+  # TensorBoard Service (Optional)
+  # ---------------------------------------------------------------------------
+  # Separate service for monitoring training runs
+  # ---------------------------------------------------------------------------
+  tensorboard:
+    image: tensorflow/tensorflow:latest
+    container_name: ml-tensorboard
+    ports:
+      - "6007:6006"
+    volumes:
+      - ../data/logs:/logs
+    command: tensorboard --logdir=/logs --bind_all
+    profiles:
+      - monitoring
+    restart: unless-stopped
+
+# =============================================================================
+# Network Configuration
+# =============================================================================
+networks:
+  default:
+    name: ml-network
+
+# =============================================================================
+# Volume Configuration
+# =============================================================================
+volumes:
+  ml-data:
+    driver: local
