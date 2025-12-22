@@ -4,6 +4,61 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.8.0] - 2025-07-08
+
+### Added
+- **Phase 4: Unsupervised Learning Module**
+  - Complete unsupervised learning curriculum with 3 notebooks
+
+- **Clustering** (`03-unsupervised-learning/01_clustering.ipynb`)
+  - 22-cell comprehensive notebook
+  - K-Means from scratch implementation
+  - Elbow method and silhouette analysis
+  - Hierarchical clustering with dendrograms
+  - DBSCAN for density-based clustering
+  - Customer segmentation practical example
+
+- **Dimensionality Reduction** (`03-unsupervised-learning/02_dimensionality_reduction.ipynb`)
+  - 22-cell comprehensive notebook
+  - Curse of dimensionality explanation
+  - PCA from scratch and sklearn implementation
+  - Variance explained analysis
+  - Image reconstruction with PCA
+  - t-SNE with perplexity tuning
+  - UMAP for manifold learning
+  - ML pipelines with dimensionality reduction
+
+- **Anomaly Detection** (`03-unsupervised-learning/03_anomaly_detection.ipynb`)
+  - 22-cell comprehensive notebook
+  - Types of anomalies (point, contextual, collective)
+  - Statistical methods (Z-score, IQR)
+  - Isolation Forest algorithm
+  - Local Outlier Factor (LOF)
+  - One-Class SVM for novelty detection
+  - Autoencoder concept for anomaly detection
+  - Credit card fraud detection example
+  - Algorithm selection guide
+
+- **Unsupervised Learning Helpers** (`src/ml_core/unsupervised.py`)
+  - `find_optimal_clusters()` - elbow and silhouette methods
+  - `evaluate_clustering()` - silhouette, Davies-Bouldin, Calinski-Harabasz
+  - `compare_clustering_algorithms()` - multi-algorithm comparison
+  - `find_optimal_dbscan_params()` - DBSCAN parameter tuning
+  - `get_pca_variance_analysis()` - variance explained analysis
+  - `get_pca_loadings()` - feature contribution to components
+  - `detect_anomalies_zscore()` - Z-score anomaly detection
+  - `detect_anomalies_iqr()` - IQR anomaly detection
+  - `get_cluster_summary()` - cluster statistics
+  - `assign_cluster_to_new_data()` - assign new points to clusters
+
+- **Unsupervised Learning Tests** (`tests/unit/test_unsupervised.py`)
+  - 37 unit tests covering all unsupervised helpers
+  - Tests for clustering, PCA, and anomaly detection functions
+
+### Changed
+- Updated `src/ml_core/__init__.py` with unsupervised module exports
+- Total test count: 204 tests passing
+
 ## [1.7.0] - 2025-07-08
 
 ### Added
