@@ -41,6 +41,16 @@ from src.utils.numpy_helpers import (
     standardize,
     train_test_split_indices,
 )
+from src.utils.pandas_helpers import (
+    create_dummy_variables,
+    dataframe_info,
+    detect_outliers_iqr,
+    fill_missing_by_group,
+    get_missing_info,
+    load_csv_optimized,
+    reduce_memory_usage,
+    split_train_test,
+)
 from src.utils.timer import Timer, time_function
 from src.utils.validators import validate_array, validate_dataframe
 
@@ -73,4 +83,13 @@ __all__ = [
     "moving_average",
     "set_seed",
     "train_test_split_indices",
+    # Pandas helpers
+    "load_csv_optimized",
+    "get_missing_info",
+    "fill_missing_by_group",
+    "create_dummy_variables",
+    "detect_outliers_iqr",
+    "split_train_test",
+    "reduce_memory_usage",
+    "dataframe_info",
 ]
