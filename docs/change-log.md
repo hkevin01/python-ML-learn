@@ -4,6 +4,65 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.12.0] - 2025-12-22
+
+### Added
+- **Phase 8: End-to-End Projects**
+  - 5 comprehensive, production-ready ML project notebooks
+  - Integrates all learning from Phases 1-7
+
+- **House Price Prediction** (`07-projects/01_house_price_prediction.ipynb`)
+  - ~25-cell end-to-end regression project
+  - Synthetic housing dataset (2000 samples, 12 features)
+  - Feature engineering (polynomial features, interactions)
+  - 5-model comparison (Linear, Ridge, Random Forest, GBM, XGBoost-style)
+  - GridSearchCV hyperparameter tuning
+  - Model serialization with joblib
+  - Complete inference pipeline
+
+- **Customer Churn Prediction** (`07-projects/02_customer_churn_prediction.ipynb`)
+  - ~25-cell classification with imbalanced data
+  - Synthetic telecom churn dataset (5000 samples, 18% churn rate)
+  - Class imbalance handling (class weights, SMOTE-style oversampling)
+  - Threshold optimization for business metrics
+  - Cost-benefit analysis with churn prevention ROI
+  - Feature importance analysis
+  - Precision-Recall and ROC curve analysis
+
+- **Image Classification App** (`07-projects/03_image_classification_app.ipynb`)
+  - ~28-cell computer vision deep learning project
+  - Synthetic pattern images (5 classes: circle, horizontal, vertical, diagonal, grid)
+  - ImageAugmenter class with rotation, flip, noise, brightness
+  - SimpleCNN class with full forward/backward implementation
+  - Training loop with validation monitoring
+  - Data augmentation strategies
+  - Complete inference pipeline
+
+- **Sentiment Analysis Pipeline** (`07-projects/04_sentiment_analysis_pipeline.ipynb`)
+  - ~24-cell NLP text classification project
+  - Synthetic review dataset (3000 samples, 3 categories)
+  - TextPreprocessor class (lowercase, punctuation, stopwords, lemmatization)
+  - Vectorization comparison (CountVectorizer vs TF-IDF)
+  - 4-model comparison (Naive Bayes, Logistic, SVM, Random Forest)
+  - Feature importance with top predictive words
+  - SentimentAnalyzer class for production use
+
+- **Recommendation System** (`07-projects/05_recommendation_system.ipynb`)
+  - ~30-cell recommendation engine project
+  - Synthetic user-item interaction data (500 users, 200 items)
+  - User-based collaborative filtering (cosine similarity)
+  - Item-based collaborative filtering
+  - Content-based filtering with item features
+  - HybridRecommender combining all approaches
+  - Evaluation metrics (RMSE, MAE, Precision@K, Recall@K, NDCG)
+
+### Changed
+- Total notebooks: 29 → 34 (+5 notebooks)
+- Phase 8 marked as complete in project-plan.md
+- Updated success metrics (5/5 end-to-end projects complete)
+
+---
+
 ## [1.11.0] - 2025-07-09
 
 ### Added

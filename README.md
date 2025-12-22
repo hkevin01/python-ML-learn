@@ -550,9 +550,9 @@ gantt
 | M3: Supervised      | Week 8  | ✅ Complete    | ████████████ 100% |
 | M4: Unsupervised    | Week 10 | ✅ Complete    | ████████████ 100% |
 | M5: Deep Learning   | Week 13 | ✅ Complete    | ████████████ 100% |
-| M6: NLP             | Week 16 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
-| M7: Computer Vision | Week 19 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
-| M8: Projects        | Week 24 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
+| M6: NLP             | Week 16 | ✅ Complete    | ████████████ 100% |
+| M7: Computer Vision | Week 19 | ✅ Complete    | ████████████ 100% |
+| M8: Projects        | Week 24 | ✅ Complete    | ████████████ 100% |
 | M9: MLOps           | Week 26 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
 
 ---
@@ -633,9 +633,24 @@ python-ML-learn/
 │   ├── 03_convolutional_neural_networks.ipynb
 │   ├── 04_recurrent_neural_networks.ipynb
 │   └── 05_training_techniques.ipynb
-├── 📓 05-nlp/                   # Text Processing, Transformers
-├── 📓 06-computer-vision/       # Object Detection, Segmentation
-├── 📓 07-projects/              # End-to-End Projects
+├── 📓 05-nlp/                   # Text Processing, Transformers (5 notebooks)
+│   ├── 01_text_preprocessing.ipynb
+│   ├── 02_text_vectorization.ipynb
+│   ├── 03_word_embeddings.ipynb
+│   ├── 04_text_classification.ipynb
+│   └── 05_transformers_introduction.ipynb
+├── 📓 06-computer-vision/       # Object Detection, Segmentation (5 notebooks)
+│   ├── 01_image_fundamentals.ipynb
+│   ├── 02_cnn_architectures.ipynb
+│   ├── 03_transfer_learning.ipynb
+│   ├── 04_object_detection.ipynb
+│   └── 05_image_segmentation.ipynb
+├── 📓 07-projects/              # End-to-End Projects (5 notebooks)
+│   ├── 01_house_price_prediction.ipynb
+│   ├── 02_customer_churn_prediction.ipynb
+│   ├── 03_image_classification_app.ipynb
+│   ├── 04_sentiment_analysis_pipeline.ipynb
+│   └── 05_recommendation_system.ipynb
 │
 ├── 💻 src/                      # Source Code
 │   ├── utils/                   # Utility functions
@@ -648,7 +663,9 @@ python-ML-learn/
 │   ├── ml_core/                 # ML helper modules
 │   │   ├── supervised.py       # Supervised learning helpers
 │   │   ├── unsupervised.py     # Unsupervised learning helpers
-│   │   └── deep_learning.py    # Deep learning helpers
+│   │   ├── deep_learning.py    # Deep learning helpers
+│   │   ├── nlp.py              # NLP helpers
+│   │   └── computer_vision.py  # Computer vision helpers
 │   ├── models/                  # ML model implementations
 │   ├── data_processing/         # Data pipelines
 │   └── visualization/           # Plotting utilities
@@ -691,7 +708,9 @@ pie title Project Completion by Phase
     "Phase 4 - Unsupervised" : 100
     "Phase 5 - Deep Learning" : 100
     "Phase 6 - NLP" : 100
-    "Phase 7-9 - Pending" : 0
+    "Phase 7 - Computer Vision" : 100
+    "Phase 8 - Projects" : 100
+    "Phase 9 - MLOps" : 0
 ```
 
 ### Test Coverage
@@ -708,19 +727,22 @@ pie title Project Completion by Phase
 | `ml_core/unsupervised.py`        | 37    | 100%     | ✅      |
 | `ml_core/deep_learning.py`       | 42    | 100%     | ✅      |
 | `ml_core/nlp.py`                 | 53    | 100%     | ✅      |
+| `ml_core/computer_vision.py`     | 63    | 100%     | ✅      |
 
-**Total Tests**: 299 passing ✅
+**Total Tests**: 362 passing ✅
 
 ### Recent Updates
 
-| Date       | Version | Changes                                                                  |
-| ---------- | ------- | ------------------------------------------------------------------------ |
-| 2025-07-08 | v1.10.0 | Phase 6: NLP (text preprocessing, embeddings, transformers)              |
-| 2025-07-08 | v1.9.0  | Phase 5: Deep learning (PyTorch, CNN, RNN, training techniques)          |
-| 2025-07-08 | v1.8.0  | Phase 4: Unsupervised learning (clustering, PCA, anomaly detection)      |
-| 2025-07-08 | v1.7.0  | Phase 3: Supervised learning (regression, classification, SVM, boosting) |
-| 2025-07-08 | v1.6.0  | Phase 2: Fundamentals complete (5 notebooks, helper modules)             |
-| 2025-07-08 | v1.0.0  | Initial project structure, Docker setup                                  |
+| Date       | Version | Changes                                                                     |
+| ---------- | ------- | --------------------------------------------------------------------------- |
+| 2025-12-22 | v1.12.0 | Phase 8: End-to-End Projects (5 comprehensive ML projects)                  |
+| 2025-07-09 | v1.11.0 | Phase 7: Computer Vision (image fundamentals, CNN, detection, segmentation) |
+| 2025-07-08 | v1.10.0 | Phase 6: NLP (text preprocessing, embeddings, transformers)                 |
+| 2025-07-08 | v1.9.0  | Phase 5: Deep learning (PyTorch, CNN, RNN, training techniques)             |
+| 2025-07-08 | v1.8.0  | Phase 4: Unsupervised learning (clustering, PCA, anomaly detection)         |
+| 2025-07-08 | v1.7.0  | Phase 3: Supervised learning (regression, classification, SVM, boosting)    |
+| 2025-07-08 | v1.6.0  | Phase 2: Fundamentals complete (5 notebooks, helper modules)                |
+| 2025-07-08 | v1.0.0  | Initial project structure, Docker setup                                     |
 
 ---
 
