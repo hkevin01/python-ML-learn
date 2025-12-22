@@ -4,6 +4,41 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.6.0] - 2025-07-08
+
+### Added
+- **Scikit-Learn Introduction Module** (`01-fundamentals/05_sklearn_introduction.ipynb`)
+  - 52-cell comprehensive scikit-learn notebook
+  - Part 1: Introduction to Scikit-Learn (Estimator API)
+  - Part 2: Loading and Exploring Datasets (built-in, synthetic)
+  - Part 3: Train/Test Split (stratification, reproducibility)
+  - Part 4: First Classification Model (KNN, comparing classifiers)
+  - Part 5: Data Preprocessing (scaling, encoding, imputation)
+  - Part 6: Pipelines (chaining, ColumnTransformer)
+  - Part 7: Cross-Validation (K-Fold, StratifiedKFold, multi-metric)
+  - Part 8: Hyperparameter Tuning (GridSearchCV, RandomizedSearchCV)
+  - Part 9: Practice Exercises & Summary
+
+- **Scikit-Learn Helpers Module** (`src/utils/sklearn_helpers.py`)
+  - `quick_train_test_split()` - train/test split with sensible defaults
+  - `evaluate_classifier()` - comprehensive classifier evaluation
+  - `evaluate_regressor()` - comprehensive regressor evaluation
+  - `compare_classifiers()` - cross-validation comparison
+  - `create_preprocessing_pipeline()` - mixed data preprocessing
+  - `quick_grid_search()` - grid search with defaults
+  - `learning_curve_data()` - generate learning curve data
+  - `get_feature_importance()` - extract feature importance
+  - `detect_data_leakage()` - check for train/test leakage
+  - `model_summary()` - get fitted model summary
+
+- **Scikit-Learn Tests** (`tests/unit/test_sklearn_helpers.py`)
+  - 29 comprehensive unit tests for sklearn helpers
+  - 100% function coverage
+
+### Changed
+- Updated `src/utils/__init__.py` with sklearn module exports
+- Total test count: 152 passing tests
+
 ## [1.5.0] - 2025-07-08
 
 ### Added
