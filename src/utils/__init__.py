@@ -93,3 +93,45 @@ __all__ = [
     "reduce_memory_usage",
     "dataframe_info",
 ]
+
+# Scikit-Learn helpers
+from .sklearn_helpers import (
+    compare_classifiers,
+    create_preprocessing_pipeline,
+    detect_data_leakage,
+    evaluate_classifier,
+    evaluate_regressor,
+    get_feature_importance,
+    learning_curve_data,
+    model_summary,
+    quick_grid_search,
+    quick_train_test_split,
+)
+
+# Statistics helpers
+from .stats_helpers import (
+    bootstrap_mean,
+    calculate_confidence_interval,
+    check_normality,
+    cohens_d,
+    compare_two_groups,
+    correlation_with_pvalue,
+    describe_distribution,
+    find_outliers_iqr,
+    find_outliers_zscore,
+    interpret_effect_size,
+)
+
+# Visualization helpers
+from .visualization_helpers import (
+    create_eda_dashboard,
+    plot_class_balance,
+    plot_confusion_matrix,
+    plot_correlation_heatmap,
+    plot_distribution,
+    plot_feature_importance,
+    plot_missing_values,
+    quick_corr,
+    quick_hist,
+    quick_missing,
+)
