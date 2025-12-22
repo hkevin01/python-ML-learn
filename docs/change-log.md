@@ -4,6 +4,166 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [1.10.0] - 2025-07-08
+
+### Added
+- **Phase 6: Natural Language Processing Module**
+  - Complete NLP curriculum with 5 notebooks
+  - NLTK 3.9.2, transformers 4.57.3, datasets 4.4.2 installed
+
+- **Text Preprocessing** (`05-nlp/01_text_preprocessing.ipynb`)
+  - 18-cell comprehensive notebook
+  - Text cleaning and normalization
+  - Tokenization techniques (simple, NLTK, custom)
+  - Stopword removal
+  - Stemming (Porter algorithm)
+  - Lemmatization with WordNet
+  - Part-of-speech tagging
+  - N-gram generation
+  - TextPreprocessor class
+
+- **Text Vectorization** (`05-nlp/02_text_vectorization.ipynb`)
+  - 18-cell comprehensive notebook
+  - Bag of Words (BoW) implementation
+  - sklearn CountVectorizer
+  - TF-IDF from scratch and with sklearn
+  - Document similarity with cosine similarity
+  - Latent Semantic Analysis (LSA)
+  - One-hot encoding for words
+  - Vectorization method comparison
+
+- **Word Embeddings** (`05-nlp/03_word_embeddings.ipynb`)
+  - 18-cell comprehensive notebook
+  - Word embedding concepts
+  - Skip-gram implementation from scratch
+  - Negative sampling
+  - PyTorch Embedding layers
+  - Simple text classifier with embeddings
+  - Word analogy tasks
+  - Embedding visualization with PCA
+  - Aggregation strategies (mean, max, weighted)
+
+- **Text Classification** (`05-nlp/04_text_classification.ipynb`)
+  - 18-cell comprehensive notebook
+  - Naive Bayes classifier
+  - Logistic Regression with TF-IDF
+  - Linear SVM classifier
+  - sklearn Pipeline for text classification
+  - Neural network text classifier
+  - Multi-class classification
+  - Feature importance analysis
+  - Confusion matrix visualization
+
+- **Transformers Introduction** (`05-nlp/05_transformers_introduction.ipynb`)
+  - 18-cell comprehensive notebook
+  - Self-attention mechanism from scratch
+  - Multi-head attention implementation
+  - Positional encoding
+  - Transformer encoder block
+  - Hugging Face pipelines (sentiment, generation, QA, NER)
+  - BERT tokenization
+  - Pre-trained model usage
+  - Sentence embeddings with mean pooling
+  - Zero-shot classification
+
+- **NLP Helper Module** (`src/ml_core/nlp.py`)
+  - 14 helper functions for NLP tasks
+  - clean_text, simple_tokenize, build_vocabulary
+  - encode_texts, compute_tf, compute_idf, compute_tfidf
+  - generate_ngrams, cosine_similarity
+  - pad_sequences, create_attention_mask
+  - TextPreprocessor class
+  - get_word_frequencies, mean_pooling
+
+- **NLP Unit Tests** (`tests/unit/test_nlp.py`)
+  - 53 comprehensive unit tests
+  - Tests for all NLP helper functions
+  - Edge case coverage
+
+### Changed
+- Updated `src/ml_core/__init__.py` with NLP exports
+- Total test count: 299 tests (all passing)
+
+## [1.9.0] - 2025-07-08
+
+### Added
+- **Phase 5: Deep Learning Fundamentals Module**
+  - Complete deep learning curriculum with 5 notebooks
+  - PyTorch 2.9.1 installed as the deep learning framework
+
+- **Neural Network Fundamentals** (`04-deep-learning/01_neural_network_fundamentals.ipynb`)
+  - 17-cell comprehensive notebook
+  - Perceptron visualization and implementation
+  - Activation functions (sigmoid, ReLU, tanh, leaky ReLU)
+  - Neural network from scratch with forward/backward propagation
+  - Backpropagation algorithm explanation
+  - Training on make_moons dataset
+  - Architecture effects comparison
+  - Learning rate effects analysis
+
+- **PyTorch Introduction** (`04-deep-learning/02_pytorch_introduction.ipynb`)
+  - 24-cell comprehensive notebook
+  - Tensor creation and operations
+  - Autograd and gradient computation
+  - nn.Module and nn.Sequential
+  - Loss functions and optimizers
+  - DataLoader and Dataset
+  - Complete training loop
+  - Model saving and loading
+  - BatchNorm and Dropout patterns
+
+- **Convolutional Neural Networks** (`04-deep-learning/03_convolutional_neural_networks.ipynb`)
+  - 19-cell comprehensive notebook
+  - Manual convolution implementation
+  - Edge detection kernels
+  - PyTorch Conv2d and pooling layers
+  - SimpleCNN architecture for MNIST
+  - Training on MNIST dataset
+  - Visualizing learned filters and feature maps
+  - Making predictions with confidence
+
+- **Recurrent Neural Networks** (`04-deep-learning/04_recurrent_neural_networks.ipynb`)
+  - 18-cell comprehensive notebook
+  - RNN cell from scratch
+  - PyTorch RNN, LSTM, and GRU
+  - LSTM gates visualization
+  - Sequence prediction example (sine wave)
+  - Bidirectional RNNs
+  - Text classification architecture
+  - RNN type comparison
+
+- **Training Techniques** (`04-deep-learning/05_training_techniques.ipynb`)
+  - 17-cell comprehensive notebook
+  - Regularization: L1/L2, Dropout, BatchNorm
+  - Optimizer comparison (SGD, Adam, RMSprop)
+  - Learning rate schedules (Step, Cosine, OneCycle)
+  - Early stopping implementation
+  - Weight initialization methods
+  - Gradient clipping
+  - Mixed precision training concepts
+  - Model checkpointing
+
+- **Deep Learning Helpers** (`src/ml_core/deep_learning.py`)
+  - `calculate_conv_output_size()` - conv layer output calculator
+  - `calculate_pool_output_size()` - pooling layer output calculator
+  - `count_parameters()` - model parameter counter
+  - `get_layer_output_shapes()` - layer-by-layer shape tracking
+  - `EarlyStopping` - early stopping with best weight restoration
+  - `TrainingHistory` - training metrics tracker with plotting
+  - `create_learning_rate_schedule()` - LR scheduler factory
+  - `compute_class_weights()` - imbalanced dataset weights
+  - `accuracy()` - classification accuracy metric
+  - `get_activation_function()` - activation by name
+
+- **Deep Learning Tests** (`tests/unit/test_deep_learning.py`)
+  - 42 unit tests covering all deep learning helpers
+  - Tests for conv/pool calculations, EarlyStopping, TrainingHistory
+  - Tests for accuracy, class weights, schedulers, activations
+
+### Changed
+- Updated `src/ml_core/__init__.py` with deep learning module exports
+- Total test count: 246 tests passing
+
 ## [1.8.0] - 2025-07-08
 
 ### Added

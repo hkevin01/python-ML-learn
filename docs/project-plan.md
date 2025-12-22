@@ -9,7 +9,7 @@
 | **Target Audience**       | Self-learners, career switchers, students, and educators                                        |
 | **Timeline**              | 26-week progressive curriculum                                                                  |
 | **Total Estimated Hours** | 560+ hours                                                                                      |
-| **Current Status**        | ✅ Phase 4 Complete                                                                              |
+| **Current Status**        | ✅ Phase 6 Complete                                                                              |
 | **Last Updated**          | July 8, 2025                                                                                    |
 
 ---
@@ -544,13 +544,26 @@ $$IG = H_{parent} - \sum_{children} \frac{n_{child}}{n_{parent}} H_{child}$$
 
 ## 🧠 Phase 5: Deep Learning Fundamentals
 
-| Attribute          | Value            |
-| ------------------ | ---------------- |
-| **Priority**       | 🟠 High           |
-| **Timeline**       | Weeks 11-13      |
-| **Status**         | ⭕ Not Started    |
-| **Dependencies**   | Phase 2, Phase 3 |
-| **Estimated Time** | 90 hours         |
+| Attribute        | Value            |
+| ---------------- | ---------------- |
+| **Priority**     | 🟠 High           |
+| **Timeline**     | Weeks 11-13      |
+| **Status**       | ✅ Complete       |
+| **Dependencies** | Phase 2, Phase 3 |
+| **Actual Time**  | 10 hours         |
+| **Completion**   | 100%             |
+
+### Completed Deliverables
+
+| Deliverable                            | Status     | Details                                      |
+| -------------------------------------- | ---------- | -------------------------------------------- |
+| 01_neural_network_fundamentals.ipynb   | ✅ Complete | 17 cells - perceptron, activations, backprop |
+| 02_pytorch_introduction.ipynb          | ✅ Complete | 24 cells - tensors, autograd, training loop  |
+| 03_convolutional_neural_networks.ipynb | ✅ Complete | 19 cells - CNN, MNIST, feature visualization |
+| 04_recurrent_neural_networks.ipynb     | ✅ Complete | 18 cells - RNN, LSTM, GRU, sequences         |
+| 05_training_techniques.ipynb           | ✅ Complete | 17 cells - regularization, optimizers, LR    |
+| deep_learning.py                       | ✅ Complete | 10 helper functions                          |
+| test_deep_learning.py                  | ✅ Complete | 42 unit tests                                |
 
 ### Neural Network Architecture
 
@@ -573,13 +586,70 @@ Input Layer → Hidden Layers → Output Layer
 
 ## 📝 Phase 6: Natural Language Processing
 
-| Attribute          | Value         |
-| ------------------ | ------------- |
-| **Priority**       | 🟡 Medium      |
-| **Timeline**       | Weeks 14-16   |
-| **Status**         | ⭕ Not Started |
-| **Dependencies**   | Phase 5       |
-| **Estimated Time** | 70 hours      |
+| Attribute          | Value       |
+| ------------------ | ----------- |
+| **Priority**       | 🟡 Medium    |
+| **Timeline**       | Weeks 14-16 |
+| **Status**         | ✅ Complete  |
+| **Dependencies**   | Phase 5     |
+| **Estimated Time** | 70 hours    |
+
+### Objectives
+Create comprehensive NLP learning materials covering text processing, embeddings, and transformers.
+
+### Completed Action Items
+
+- [x] **6.1 Install NLP Libraries**
+  - NLTK 3.9.2, transformers 4.57.3, datasets 4.4.2
+  - Hugging Face ecosystem for modern NLP
+
+- [x] **6.2 Text Preprocessing** (`05-nlp/01_text_preprocessing.ipynb`)
+  - Text cleaning and normalization
+  - Tokenization (simple, NLTK, custom)
+  - Stopword removal, stemming, lemmatization
+  - POS tagging and n-grams
+  - TextPreprocessor class
+
+- [x] **6.3 Text Vectorization** (`05-nlp/02_text_vectorization.ipynb`)
+  - Bag of Words implementation
+  - TF-IDF from scratch and sklearn
+  - Document similarity with cosine
+  - Latent Semantic Analysis
+  - Vectorization comparison
+
+- [x] **6.4 Word Embeddings** (`05-nlp/03_word_embeddings.ipynb`)
+  - Skip-gram from scratch
+  - PyTorch Embedding layers
+  - Word analogy tasks
+  - Embedding visualization
+
+- [x] **6.5 Text Classification** (`05-nlp/04_text_classification.ipynb`)
+  - Naive Bayes, Logistic Regression, SVM
+  - Neural text classifier
+  - sklearn Pipeline patterns
+  - Multi-class classification
+
+- [x] **6.6 Transformers Introduction** (`05-nlp/05_transformers_introduction.ipynb`)
+  - Self-attention from scratch
+  - Multi-head attention
+  - Hugging Face pipelines
+  - Pre-trained models (BERT)
+  - Zero-shot classification
+
+- [x] **6.7 NLP Helper Module** (`src/ml_core/nlp.py`)
+  - 14 helper functions
+  - TextPreprocessor class
+  - Comprehensive docstrings
+
+- [x] **6.8 Unit Tests** (`tests/unit/test_nlp.py`)
+  - 53 unit tests
+  - All passing
+
+### Measured Impact
+- ✅ 5 NLP notebooks with 18+ cells each
+- ✅ 14 reusable NLP functions
+- ✅ 53 new unit tests (299 total)
+- ✅ Covers classical and modern NLP
 
 ---
 
@@ -658,7 +728,7 @@ Input Layer → Hidden Layers → Output Layer
 | M2: Fundamentals Complete   | Week 5  | ✅ Complete    | ████████████ 100% |
 | M3: Supervised Learning     | Week 8  | ✅ Complete    | ████████████ 100% |
 | M4: Unsupervised Learning   | Week 10 | ✅ Complete    | ████████████ 100% |
-| M5: Deep Learning Basics    | Week 13 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
+| M5: Deep Learning Basics    | Week 13 | ✅ Complete    | ████████████ 100% |
 | M6: NLP Mastery             | Week 16 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
 | M7: Computer Vision         | Week 19 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
 | M8: Projects Complete       | Week 24 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
@@ -674,7 +744,7 @@ Input Layer → Hidden Layers → Output Layer
 | Phase 2: Fundamentals          | 60              | ✅ Complete    |
 | Phase 3: Supervised Learning   | 80              | ✅ Complete    |
 | Phase 4: Unsupervised Learning | 50              | ✅ Complete    |
-| Phase 5: Deep Learning         | 90              | ⭕ Not Started |
+| Phase 5: Deep Learning         | 90              | ✅ Complete    |
 | Phase 6: NLP                   | 70              | ⭕ Not Started |
 | Phase 7: Computer Vision       | 70              | ⭕ Not Started |
 | Phase 8: Projects              | 100+            | ⭕ Not Started |

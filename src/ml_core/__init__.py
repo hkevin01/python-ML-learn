@@ -6,9 +6,37 @@ ml_core Package
 Part of the Python Machine Learning Study Guide.
 
 Core ML utilities and helper functions for supervised, unsupervised,
-and deep learning modules.
+deep learning, and NLP modules.
 """
 
+from .deep_learning import (
+    EarlyStopping,
+    TrainingHistory,
+    accuracy,
+    calculate_conv_output_size,
+    calculate_pool_output_size,
+    compute_class_weights,
+    count_parameters,
+    create_learning_rate_schedule,
+    get_activation_function,
+    get_layer_output_shapes,
+)
+from .nlp import (
+    TextPreprocessor,
+    build_vocabulary,
+    clean_text,
+    compute_idf,
+    compute_tf,
+    compute_tfidf,
+    cosine_similarity,
+    create_attention_mask,
+    encode_texts,
+    generate_ngrams,
+    get_word_frequencies,
+    mean_pooling,
+    pad_sequences,
+    simple_tokenize,
+)
 from .supervised import (
     compare_models,
     create_baseline_models,
@@ -53,4 +81,30 @@ __all__ = [
     "detect_anomalies_iqr",
     "get_cluster_summary",
     "assign_cluster_to_new_data",
+    # Deep Learning
+    "calculate_conv_output_size",
+    "calculate_pool_output_size",
+    "count_parameters",
+    "get_layer_output_shapes",
+    "EarlyStopping",
+    "TrainingHistory",
+    "create_learning_rate_schedule",
+    "compute_class_weights",
+    "accuracy",
+    "get_activation_function",
+    # NLP
+    "clean_text",
+    "simple_tokenize",
+    "build_vocabulary",
+    "encode_texts",
+    "compute_tf",
+    "compute_idf",
+    "compute_tfidf",
+    "generate_ngrams",
+    "cosine_similarity",
+    "pad_sequences",
+    "create_attention_mask",
+    "TextPreprocessor",
+    "get_word_frequencies",
+    "mean_pooling",
 ]

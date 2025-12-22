@@ -549,7 +549,7 @@ gantt
 | M2: Fundamentals    | Week 5  | ✅ Complete    | ████████████ 100% |
 | M3: Supervised      | Week 8  | ✅ Complete    | ████████████ 100% |
 | M4: Unsupervised    | Week 10 | ✅ Complete    | ████████████ 100% |
-| M5: Deep Learning   | Week 13 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
+| M5: Deep Learning   | Week 13 | ✅ Complete    | ████████████ 100% |
 | M6: NLP             | Week 16 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
 | M7: Computer Vision | Week 19 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
 | M8: Projects        | Week 24 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
@@ -627,7 +627,12 @@ python-ML-learn/
 │   ├── 01_clustering.ipynb
 │   ├── 02_dimensionality_reduction.ipynb
 │   └── 03_anomaly_detection.ipynb
-├── 📓 04-deep-learning/         # Neural Networks, CNN, RNN
+├── 📓 04-deep-learning/         # Neural Networks, CNN, RNN (5 notebooks)
+│   ├── 01_neural_network_fundamentals.ipynb
+│   ├── 02_pytorch_introduction.ipynb
+│   ├── 03_convolutional_neural_networks.ipynb
+│   ├── 04_recurrent_neural_networks.ipynb
+│   └── 05_training_techniques.ipynb
 ├── 📓 05-nlp/                   # Text Processing, Transformers
 ├── 📓 06-computer-vision/       # Object Detection, Segmentation
 ├── 📓 07-projects/              # End-to-End Projects
@@ -642,7 +647,8 @@ python-ML-learn/
 │   │   └── visualization_helpers.py # Plotting utilities
 │   ├── ml_core/                 # ML helper modules
 │   │   ├── supervised.py       # Supervised learning helpers
-│   │   └── unsupervised.py     # Unsupervised learning helpers
+│   │   ├── unsupervised.py     # Unsupervised learning helpers
+│   │   └── deep_learning.py    # Deep learning helpers
 │   ├── models/                  # ML model implementations
 │   ├── data_processing/         # Data pipelines
 │   └── visualization/           # Plotting utilities
@@ -683,7 +689,9 @@ pie title Project Completion by Phase
     "Phase 2 - Fundamentals" : 100
     "Phase 3 - Supervised" : 100
     "Phase 4 - Unsupervised" : 100
-    "Phase 5-9 - Pending" : 0
+    "Phase 5 - Deep Learning" : 100
+    "Phase 6 - NLP" : 100
+    "Phase 7-9 - Pending" : 0
 ```
 
 ### Test Coverage
@@ -698,17 +706,21 @@ pie title Project Completion by Phase
 | `utils/visualization_helpers.py` | 31    | 100%     | ✅      |
 | `ml_core/supervised.py`          | 15    | 100%     | ✅      |
 | `ml_core/unsupervised.py`        | 37    | 100%     | ✅      |
+| `ml_core/deep_learning.py`       | 42    | 100%     | ✅      |
+| `ml_core/nlp.py`                 | 53    | 100%     | ✅      |
 
-**Total Tests**: 204 passing ✅
+**Total Tests**: 299 passing ✅
 
 ### Recent Updates
 
 | Date       | Version | Changes                                                                  |
 | ---------- | ------- | ------------------------------------------------------------------------ |
-| 2025-12-22 | v1.8.0  | Phase 4: Unsupervised learning (clustering, PCA, anomaly detection)      |
-| 2025-12-22 | v1.7.0  | Phase 3: Supervised learning (regression, classification, SVM, boosting) |
-| 2025-12-22 | v1.6.0  | Phase 2: Fundamentals complete (5 notebooks, helper modules)             |
-| 2025-12-22 | v1.0.0  | Initial project structure, Docker setup                                  |
+| 2025-07-08 | v1.10.0 | Phase 6: NLP (text preprocessing, embeddings, transformers)              |
+| 2025-07-08 | v1.9.0  | Phase 5: Deep learning (PyTorch, CNN, RNN, training techniques)          |
+| 2025-07-08 | v1.8.0  | Phase 4: Unsupervised learning (clustering, PCA, anomaly detection)      |
+| 2025-07-08 | v1.7.0  | Phase 3: Supervised learning (regression, classification, SVM, boosting) |
+| 2025-07-08 | v1.6.0  | Phase 2: Fundamentals complete (5 notebooks, helper modules)             |
+| 2025-07-08 | v1.0.0  | Initial project structure, Docker setup                                  |
 
 ---
 
