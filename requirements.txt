@@ -70,3 +70,10 @@ streamlit>=1.25.0,<2.0.0
 # Optional: MLOps
 mlflow>=2.5.0,<3.0.0
 wandb>=0.15.0,<1.0.0
+
+# Spatial / Geostatistics (Optional)
+PyKrige>=1.7.3,<2.0.0
+scikit-gstat>=1.0.22,<2.0.0
+
+# Statistical Modeling (Optional)
+pygam>=0.9.0,<1.0.0
