@@ -16,8 +16,8 @@ from src.utils.logger import (
     setup_logging,
     get_logger,
     LogColors,
-    log_function_call,
-    log_execution_time,
+    log_execution,
+    ExperimentLogger,
 )
 
 
@@ -87,6 +87,11 @@ class TestGetLogger:
         logger1 = get_logger('shared')
         logger2 = get_logger('shared')
         assert logger1 is logger2
+    
+    def test_get_logger_without_name(self):
+        """Test getting logger without name."""
+        logger = get_logger()
+        assert logger is not None
 
 
 # ============================================================================
@@ -122,15 +127,80 @@ class TestLogColors:
 
 
 # ============================================================================
-# Test Decorators
+# Test Experiment Logger
 # ============================================================================
 
-class TestLogFunctionCall:
-    """Tests for log_function_call decorator."""
+class TestExperimentLogger:
+    """Tests for ExperimentLogger class."""
+    
+    def test_create_experiment_logger(self):
+        """Test creating experiment logger."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            exp_logger = ExperimentLogger(
+                name="test_exp",
+                log_dir=tmpdir
+            )
+            assert exp_logger is not None
+            assert exp_logger.name == "test_exp"
+    
+    def test_log_metric(self):
+        """Test logging metrics."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            exp_logger = ExperimentLogger(
+                name="test_exp",
+                log_dir=tmpdir
+            )
+            
+            exp_logger.log_metric("loss", 0.5, step=1)
+            exp_logger.log_metric("accuracy", 0.9, step=1)
+            
+            assert "loss" in exp_logger.metrics
+            assert "accuracy" in exp_logger.metrics
+    
+    def test_log_params(self):
+        """Test logging parameters."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            exp_logger = ExperimentLogger(
+                name="test_exp",
+                log_dir=tmpdir
+            )
+            
+            exp_logger.log_params({
+                "learning_rate": 0.001,
+                "batch_size": 32
+            })
+            
+            assert exp_logger.params["learning_rate"] == 0.001
+            assert exp_logger.params["batch_size"] == 32
+    
+    def test_finish_returns_summary(self):
+        """Test that finish returns experiment summary."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            exp_logger = ExperimentLogger(
+                name="test_exp",
+                log_dir=tmpdir
+            )
+            
+            exp_logger.log_params({"lr": 0.01})
+            exp_logger.log_metric("loss", 0.5)
+            
+            summary = exp_logger.finish()
+            
+            assert 'name' in summary
+            assert 'params' in summary
+            assert 'metrics' in summary
+
+
+# ============================================================================
+# Test Log Execution Decorator
+# ============================================================================
+
+class TestLogExecution:
+    """Tests for log_execution decorator."""
     
     def test_decorator_logs_function(self, caplog):
         """Test that decorator logs function call."""
-        @log_function_call
+        @log_execution()
         def my_function():
             return 42
         
@@ -141,7 +211,7 @@ class TestLogFunctionCall:
     
     def test_decorator_preserves_function_name(self):
         """Test that decorator preserves function metadata."""
-        @log_function_call
+        @log_execution()
         def my_function():
             """My docstring."""
             pass
@@ -150,7 +220,7 @@ class TestLogFunctionCall:
     
     def test_decorator_with_args(self, caplog):
         """Test decorator with function arguments."""
-        @log_function_call
+        @log_execution()
         def add(a, b):
             return a + b
         
@@ -158,41 +228,6 @@ class TestLogFunctionCall:
             result = add(3, 4)
         
         assert result == 7
-
-
-class TestLogExecutionTime:
-    """Tests for log_execution_time decorator."""
-    
-    def test_logs_execution_time(self, caplog):
-        """Test that execution time is logged."""
-        @log_execution_time
-        def slow_function():
-            import time
-            time.sleep(0.01)
-            return "done"
-        
-        with caplog.at_level(logging.DEBUG):
-            result = slow_function()
-        
-        assert result == "done"
-    
-    def test_preserves_return_value(self):
-        """Test that return value is preserved."""
-        @log_execution_time
-        def get_value():
-            return {"key": "value"}
-        
-        result = get_value()
-        assert result == {"key": "value"}
-    
-    def test_preserves_function_name(self):
-        """Test that decorator preserves function metadata."""
-        @log_execution_time
-        def my_timed_function():
-            """Timed docstring."""
-            pass
-        
-        assert my_timed_function.__name__ == "my_timed_function"
 
 
 # ============================================================================
@@ -220,7 +255,7 @@ class TestEdgeCases:
     
     def test_exception_in_decorated_function(self):
         """Test that exceptions propagate through decorators."""
-        @log_function_call
+        @log_execution()
         def failing_function():
             raise ValueError("Test error")
         

@@ -4,7 +4,7 @@ Unit tests for error_handling module.
 
 import pytest
 import sys
-import os
+import time
 from pathlib import Path
 
 # Add src to path
@@ -14,9 +14,12 @@ from src.utils.error_handling import (
     MLError,
     DataValidationError,
     ModelNotFittedError,
+    TrainingError,
+    ResourceError,
+    ConfigurationError,
+    Result,
     safe_execute,
     retry,
-    fallback,
 )
 
 
@@ -102,6 +105,84 @@ class TestModelNotFittedError:
         """Test that we can raise and catch properly."""
         with pytest.raises(ModelNotFittedError):
             raise ModelNotFittedError("Call fit() first")
+
+
+class TestTrainingError:
+    """Tests for TrainingError."""
+    
+    def test_basic_creation(self):
+        """Test basic creation."""
+        error = TrainingError("Training failed")
+        assert isinstance(error, MLError)
+    
+    def test_with_epoch_info(self):
+        """Test with epoch info."""
+        error = TrainingError(
+            "Loss exploded",
+            epoch=10,
+            loss=float('inf')
+        )
+        assert error.details['epoch'] == 10
+        assert error.details['loss'] == float('inf')
+
+
+class TestResourceError:
+    """Tests for ResourceError."""
+    
+    def test_basic_creation(self):
+        """Test basic creation."""
+        error = ResourceError("Out of memory")
+        assert isinstance(error, MLError)
+
+
+class TestConfigurationError:
+    """Tests for ConfigurationError."""
+    
+    def test_basic_creation(self):
+        """Test basic creation."""
+        error = ConfigurationError("Invalid config")
+        assert isinstance(error, MLError)
+
+
+# ============================================================================
+# Test Result Class
+# ============================================================================
+
+class TestResult:
+    """Tests for the Result class."""
+    
+    def test_success_result(self):
+        """Test successful result."""
+        result = Result.ok(42)
+        assert result.success is True
+        assert result.value == 42
+    
+    def test_failure_result(self):
+        """Test failure result."""
+        error = ValueError("Something went wrong")
+        result = Result.fail(error)
+        assert result.success is False
+        assert result.error == error
+    
+    def test_unwrap_success(self):
+        """Test unwrap on success."""
+        result = Result.ok(42)
+        assert result.unwrap() == 42
+    
+    def test_unwrap_failure(self):
+        """Test unwrap on failure raises error."""
+        error = ValueError("error")
+        result = Result.fail(error)
+        with pytest.raises(ValueError):
+            result.unwrap()
+    
+    def test_unwrap_or(self):
+        """Test unwrap_or method."""
+        success = Result.ok(42)
+        failure = Result.fail(ValueError("error"))
+        
+        assert success.unwrap_or(0) == 42
+        assert failure.unwrap_or(0) == 0
 
 
 # ============================================================================
@@ -198,40 +279,6 @@ class TestRetryDecorator:
 
 
 # ============================================================================
-# Test Fallback Decorator
-# ============================================================================
-
-class TestFallbackDecorator:
-    """Tests for fallback decorator."""
-    
-    def test_returns_normal_result(self):
-        """Test normal execution returns result."""
-        @fallback(default_value="fallback")
-        def succeed():
-            return "success"
-        
-        assert succeed() == "success"
-    
-    def test_returns_fallback_on_error(self):
-        """Test fallback on error."""
-        @fallback(default_value="fallback")
-        def fail():
-            raise RuntimeError("Error")
-        
-        assert fail() == "fallback"
-    
-    def test_preserves_function_name(self):
-        """Test that decorator preserves function metadata."""
-        @fallback(default_value=None)
-        def my_function():
-            """My docstring."""
-            pass
-        
-        assert my_function.__name__ == "my_function"
-        assert my_function.__doc__ == "My docstring."
-
-
-# ============================================================================
 # Edge Cases and Error Conditions
 # ============================================================================
 
@@ -266,3 +313,17 @@ class TestEdgeCases:
         d = error.to_dict()
         assert d['details']['list'] == [1, 2, 3]
         assert d['details']['nested'] == {"a": 1}
+    
+    def test_exception_hierarchy(self):
+        """Test that all custom exceptions inherit from MLError."""
+        errors = [
+            DataValidationError("test"),
+            ModelNotFittedError("test"),
+            TrainingError("test"),
+            ResourceError("test"),
+            ConfigurationError("test"),
+        ]
+        
+        for error in errors:
+            assert isinstance(error, MLError)
+            assert isinstance(error, Exception)
