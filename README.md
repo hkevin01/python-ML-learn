@@ -41,13 +41,13 @@
 
 Learning Machine Learning is challenging due to:
 
-| Challenge                | Impact                                           | Our Solution                             |
+| <sub>Challenge</sub> | <sub>Impact</sub> | <sub>Our Solution</sub> |
 | ------------------------ | ------------------------------------------------ | ---------------------------------------- |
-| **Fragmented Resources** | Learners jump between tutorials without cohesion | Unified, progressive curriculum          |
-| **Theory-Practice Gap**  | Math concepts don't connect to code              | Every concept has implementation         |
-| **No Production Focus**  | Tutorials don't cover real-world deployment      | End-to-end projects with deployment      |
-| **Outdated Content**     | Many resources use deprecated libraries          | Modern stack (PyTorch 2.0+, Python 3.12) |
-| **Missing Testing**      | No emphasis on code quality                      | TDD approach with pytest                 |
+| <sub>**Fragmented Resources**</sub> | <sub>Learners jump between tutorials without cohesion</sub> | <sub>Unified, progressive curriculum</sub> |
+| <sub>**Theory-Practice Gap**</sub> | <sub>Math concepts don't connect to code</sub> | <sub>Every concept has implementation</sub> |
+| <sub>**No Production Focus**</sub> | <sub>Tutorials don't cover real-world deployment</sub> | <sub>End-to-end projects with deployment</sub> |
+| <sub>**Outdated Content**</sub> | <sub>Many resources use deprecated libraries</sub> | <sub>Modern stack (PyTorch 2.0+, Python 3.12)</sub> |
+| <sub>**Missing Testing**</sub> | <sub>No emphasis on code quality</sub> | <sub>TDD approach with pytest</sub> |
 
 ### The Solution
 
@@ -121,12 +121,12 @@ mindmap
 
 ### Success Metrics
 
-| Metric                  | Target           | Measurement                   |
+| <sub>Metric</sub> | <sub>Target</sub> | <sub>Measurement</sub> |
 | ----------------------- | ---------------- | ----------------------------- |
-| **Notebooks Completed** | 50+              | Interactive Jupyter notebooks |
-| **Unit Tests**          | 90%+ coverage    | pytest with coverage reports  |
-| **Projects Built**      | 5+ end-to-end    | From data to deployment       |
-| **Code Quality**        | 100% type-hinted | mypy + pylint passing         |
+| <sub>**Notebooks Completed**</sub> | <sub>50+</sub> | <sub>Interactive Jupyter notebooks</sub> |
+| <sub>**Unit Tests**</sub> | <sub>90%+ coverage</sub> | <sub>pytest with coverage reports</sub> |
+| <sub>**Projects Built**</sub> | <sub>5+ end-to-end</sub> | <sub>From data to deployment</sub> |
+| <sub>**Code Quality**</sub> | <sub>100% type-hinted</sub> | <sub>mypy + pylint passing</sub> |
 
 ---
 
@@ -313,12 +313,12 @@ flowchart TB
 <details>
 <summary><b>📘 Phase 1: Foundation (Weeks 1-2)</b></summary>
 
-| Topic                   | Description              | Deliverable                        |
+| <sub>Topic</sub> | <sub>Description</sub> | <sub>Deliverable</sub> |
 | ----------------------- | ------------------------ | ---------------------------------- |
-| Project Structure       | Modular src layout       | Folder hierarchy                   |
-| Development Environment | VS Code + extensions     | `.vscode/settings.json`            |
-| Docker Setup            | Reproducible environment | `Dockerfile`, `docker-compose.yml` |
-| Testing Framework       | pytest configuration     | `conftest.py`, `pytest.ini`        |
+| <sub>Project Structure</sub> | <sub>Modular src layout</sub> | <sub>Folder hierarchy</sub> |
+| <sub>Development Environment</sub> | <sub>VS Code + extensions</sub> | <sub>`.vscode/settings.json`</sub> |
+| <sub>Docker Setup</sub> | <sub>Reproducible environment</sub> | <sub>`Dockerfile`, `docker-compose.yml`</sub> |
+| <sub>Testing Framework</sub> | <sub>pytest configuration</sub> | <sub>`conftest.py`, `pytest.ini`</sub> |
 
 **Status**: ✅ Complete
 
@@ -327,13 +327,13 @@ flowchart TB
 <details>
 <summary><b>📗 Phase 2: Core ML Fundamentals (Weeks 3-5)</b></summary>
 
-| Topic                  | Key Concepts                         | Notebook                            |
+| <sub>Topic</sub> | <sub>Key Concepts</sub> | <sub>Notebook</sub> |
 | ---------------------- | ------------------------------------ | ----------------------------------- |
-| **NumPy**              | Arrays, broadcasting, linear algebra | `01_numpy_fundamentals.ipynb`       |
-| **Pandas**             | DataFrames, cleaning, aggregation    | `02_pandas_data_manipulation.ipynb` |
-| **Visualization**      | matplotlib, seaborn, plotly          | `03_data_visualization.ipynb`       |
-| **Statistics**         | Distributions, hypothesis testing    | `04_statistics_for_ml.ipynb`        |
-| **Scikit-learn Intro** | Pipelines, preprocessing, models     | `05_sklearn_introduction.ipynb`     |
+| <sub>**NumPy**</sub> | <sub>Arrays, broadcasting, linear algebra</sub> | <sub>`01_numpy_fundamentals.ipynb`</sub> |
+| <sub>**Pandas**</sub> | <sub>DataFrames, cleaning, aggregation</sub> | <sub>`02_pandas_data_manipulation.ipynb`</sub> |
+| <sub>**Visualization**</sub> | <sub>matplotlib, seaborn, plotly</sub> | <sub>`03_data_visualization.ipynb`</sub> |
+| <sub>**Statistics**</sub> | <sub>Distributions, hypothesis testing</sub> | <sub>`04_statistics_for_ml.ipynb`</sub> |
+| <sub>**Scikit-learn Intro**</sub> | <sub>Pipelines, preprocessing, models</sub> | <sub>`05_sklearn_introduction.ipynb`</sub> |
 
 **Status**: ✅ Complete (5 notebooks, 114 tests)
 
@@ -342,14 +342,14 @@ flowchart TB
 <details>
 <summary><b>📙 Phase 3: Supervised Learning (Weeks 6-8)</b></summary>
 
-| Algorithm               | Mathematical Foundation           | Implementation         |
+| <sub>Algorithm</sub> | <sub>Mathematical Foundation</sub> | <sub>Implementation</sub> |
 | ----------------------- | --------------------------------- | ---------------------- |
-| **Linear Regression**   | $\hat{y} = X\beta$, MSE loss      | From scratch + sklearn |
-| **Logistic Regression** | Sigmoid, cross-entropy            | Binary & multiclass    |
-| **Decision Trees**      | Gini impurity, entropy            | Visualization included |
-| **Random Forests**      | Bagging, feature importance       | Hyperparameter tuning  |
-| **SVM**                 | Kernel trick, margin maximization | Multiple kernels       |
-| **Gradient Boosting**   | Sequential ensembles              | XGBoost, LightGBM      |
+| <sub>**Linear Regression**</sub> | <sub>$\hat{y} = X\beta$, MSE loss</sub> | <sub>From scratch + sklearn</sub> |
+| <sub>**Logistic Regression**</sub> | <sub>Sigmoid, cross-entropy</sub> | <sub>Binary & multiclass</sub> |
+| <sub>**Decision Trees**</sub> | <sub>Gini impurity, entropy</sub> | <sub>Visualization included</sub> |
+| <sub>**Random Forests**</sub> | <sub>Bagging, feature importance</sub> | <sub>Hyperparameter tuning</sub> |
+| <sub>**SVM**</sub> | <sub>Kernel trick, margin maximization</sub> | <sub>Multiple kernels</sub> |
+| <sub>**Gradient Boosting**</sub> | <sub>Sequential ensembles</sub> | <sub>XGBoost, LightGBM</sub> |
 
 **Status**: ✅ Complete (5 notebooks, 15 tests)
 
@@ -358,14 +358,14 @@ flowchart TB
 <details>
 <summary><b>📕 Phase 4: Unsupervised Learning (Weeks 9-10)</b></summary>
 
-| Algorithm             | Purpose                   | Implementation                       |
+| <sub>Algorithm</sub> | <sub>Purpose</sub> | <sub>Implementation</sub> |
 | --------------------- | ------------------------- | ------------------------------------ |
-| **K-Means**           | Centroid-based clustering | From scratch + sklearn               |
-| **Hierarchical**      | Agglomerative clustering  | Dendrograms                          |
-| **DBSCAN**            | Density-based clustering  | Parameter tuning                     |
-| **PCA**               | Dimensionality reduction  | From scratch + sklearn               |
-| **t-SNE**             | Visualization             | Perplexity tuning                    |
-| **Anomaly Detection** | Outlier detection         | Isolation Forest, LOF, One-Class SVM |
+| <sub>**K-Means**</sub> | <sub>Centroid-based clustering</sub> | <sub>From scratch + sklearn</sub> |
+| <sub>**Hierarchical**</sub> | <sub>Agglomerative clustering</sub> | <sub>Dendrograms</sub> |
+| <sub>**DBSCAN**</sub> | <sub>Density-based clustering</sub> | <sub>Parameter tuning</sub> |
+| <sub>**PCA**</sub> | <sub>Dimensionality reduction</sub> | <sub>From scratch + sklearn</sub> |
+| <sub>**t-SNE**</sub> | <sub>Visualization</sub> | <sub>Perplexity tuning</sub> |
+| <sub>**Anomaly Detection**</sub> | <sub>Outlier detection</sub> | <sub>Isolation Forest, LOF, One-Class SVM</sub> |
 
 **Status**: ✅ Complete (3 notebooks, 37 tests)
 
@@ -374,13 +374,13 @@ flowchart TB
 <details>
 <summary><b>📕 Phase 5-9: Advanced Topics (Weeks 11-26)</b></summary>
 
-| Phase                  | Topics                         | Hours |
+| <sub>Phase</sub> | <sub>Topics</sub> | <sub>Hours</sub> |
 | ---------------------- | ------------------------------ | ----- |
-| **5. Deep Learning**   | Neural nets, CNN, RNN, PyTorch | 90    |
-| **6. NLP**             | Embeddings, BERT, Transformers | 70    |
-| **7. Computer Vision** | Object detection, segmentation | 70    |
-| **8. Projects**        | End-to-end ML systems          | 100+  |
-| **9. MLOps**           | Deployment, monitoring, CI/CD  | 40    |
+| <sub>**5. Deep Learning**</sub> | <sub>Neural nets, CNN, RNN, PyTorch</sub> | <sub>90</sub> |
+| <sub>**6. NLP**</sub> | <sub>Embeddings, BERT, Transformers</sub> | <sub>70</sub> |
+| <sub>**7. Computer Vision**</sub> | <sub>Object detection, segmentation</sub> | <sub>70</sub> |
+| <sub>**8. Projects**</sub> | <sub>End-to-end ML systems</sub> | <sub>100+</sub> |
+| <sub>**9. MLOps**</sub> | <sub>Deployment, monitoring, CI/CD</sub> | <sub>40</sub> |
 
 </details>
 
@@ -443,18 +443,18 @@ flowchart TB
 
 ### Technology Reference
 
-| Technology       | Version | Purpose             | Why Chosen                                     |
+| <sub>Technology</sub> | <sub>Version</sub> | <sub>Purpose</sub> | <sub>Why Chosen</sub> |
 | ---------------- | ------- | ------------------- | ---------------------------------------------- |
-| **Python**       | 3.12+   | Core language       | Industry standard, rich ecosystem              |
-| **NumPy**        | 2.4+    | Numerical computing | 10-100x faster than pure Python, vectorization |
-| **Pandas**       | 2.0+    | Data manipulation   | Intuitive DataFrame API, SQL-like operations   |
-| **scikit-learn** | 1.3+    | Classical ML        | Consistent API, comprehensive algorithms       |
-| **PyTorch**      | 2.0+    | Deep learning       | Dynamic graphs, Pythonic, research-friendly    |
-| **TensorFlow**   | 2.13+   | Deep learning       | Production-ready, TensorBoard, Keras API       |
-| **Matplotlib**   | 3.7+    | Plotting            | Highly customizable, publication quality       |
-| **Seaborn**      | 0.12+   | Statistical viz     | Beautiful defaults, statistical plots          |
-| **Docker**       | Latest  | Containerization    | Reproducible environments                      |
-| **pytest**       | 7.4+    | Testing             | Simple syntax, powerful fixtures               |
+| <sub>**Python**</sub> | <sub>3.12+</sub> | <sub>Core language</sub> | <sub>Industry standard, rich ecosystem</sub> |
+| <sub>**NumPy**</sub> | <sub>2.4+</sub> | <sub>Numerical computing</sub> | <sub>10-100x faster than pure Python, vectorization</sub> |
+| <sub>**Pandas**</sub> | <sub>2.0+</sub> | <sub>Data manipulation</sub> | <sub>Intuitive DataFrame API, SQL-like operations</sub> |
+| <sub>**scikit-learn**</sub> | <sub>1.3+</sub> | <sub>Classical ML</sub> | <sub>Consistent API, comprehensive algorithms</sub> |
+| <sub>**PyTorch**</sub> | <sub>2.0+</sub> | <sub>Deep learning</sub> | <sub>Dynamic graphs, Pythonic, research-friendly</sub> |
+| <sub>**TensorFlow**</sub> | <sub>2.13+</sub> | <sub>Deep learning</sub> | <sub>Production-ready, TensorBoard, Keras API</sub> |
+| <sub>**Matplotlib**</sub> | <sub>3.7+</sub> | <sub>Plotting</sub> | <sub>Highly customizable, publication quality</sub> |
+| <sub>**Seaborn**</sub> | <sub>0.12+</sub> | <sub>Statistical viz</sub> | <sub>Beautiful defaults, statistical plots</sub> |
+| <sub>**Docker**</sub> | <sub>Latest</sub> | <sub>Containerization</sub> | <sub>Reproducible environments</sub> |
+| <sub>**pytest**</sub> | <sub>7.4+</sub> | <sub>Testing</sub> | <sub>Simple syntax, powerful fixtures</sub> |
 
 ### NumPy: The Foundation
 
@@ -543,17 +543,17 @@ gantt
 
 ### Milestone Tracker
 
-| Milestone           | Target  | Status        | Progress          |
+| <sub>Milestone</sub> | <sub>Target</sub> | <sub>Status</sub> | <sub>Progress</sub> |
 | ------------------- | ------- | ------------- | ----------------- |
-| M1: Infrastructure  | Week 2  | ✅ Complete    | ████████████ 100% |
-| M2: Fundamentals    | Week 5  | ✅ Complete    | ████████████ 100% |
-| M3: Supervised      | Week 8  | ✅ Complete    | ████████████ 100% |
-| M4: Unsupervised    | Week 10 | ✅ Complete    | ████████████ 100% |
-| M5: Deep Learning   | Week 13 | ✅ Complete    | ████████████ 100% |
-| M6: NLP             | Week 16 | ✅ Complete    | ████████████ 100% |
-| M7: Computer Vision | Week 19 | ✅ Complete    | ████████████ 100% |
-| M8: Projects        | Week 24 | ✅ Complete    | ████████████ 100% |
-| M9: MLOps           | Week 26 | ⭕ Not Started | ░░░░░░░░░░░░ 0%   |
+| <sub>M1: Infrastructure</sub> | <sub>Week 2</sub> | <sub>✅ Complete</sub> | <sub>████████████ 100%</sub> |
+| <sub>M2: Fundamentals</sub> | <sub>Week 5</sub> | <sub>✅ Complete</sub> | <sub>████████████ 100%</sub> |
+| <sub>M3: Supervised</sub> | <sub>Week 8</sub> | <sub>✅ Complete</sub> | <sub>████████████ 100%</sub> |
+| <sub>M4: Unsupervised</sub> | <sub>Week 10</sub> | <sub>✅ Complete</sub> | <sub>████████████ 100%</sub> |
+| <sub>M5: Deep Learning</sub> | <sub>Week 13</sub> | <sub>✅ Complete</sub> | <sub>████████████ 100%</sub> |
+| <sub>M6: NLP</sub> | <sub>Week 16</sub> | <sub>✅ Complete</sub> | <sub>████████████ 100%</sub> |
+| <sub>M7: Computer Vision</sub> | <sub>Week 19</sub> | <sub>✅ Complete</sub> | <sub>████████████ 100%</sub> |
+| <sub>M8: Projects</sub> | <sub>Week 24</sub> | <sub>✅ Complete</sub> | <sub>████████████ 100%</sub> |
+| <sub>M9: MLOps</sub> | <sub>Week 26</sub> | <sub>⭕ Not Started</sub> | <sub>░░░░░░░░░░░░ 0%</sub> |
 
 ---
 
@@ -561,12 +561,12 @@ gantt
 
 ### Prerequisites
 
-| Requirement       | Version | Check Command      |
+| <sub>Requirement</sub> | <sub>Version</sub> | <sub>Check Command</sub> |
 | ----------------- | ------- | ------------------ |
-| Python            | 3.8+    | `python --version` |
-| pip               | Latest  | `pip --version`    |
-| Git               | Latest  | `git --version`    |
-| Docker (optional) | Latest  | `docker --version` |
+| <sub>Python</sub> | <sub>3.8+</sub> | <sub>`python --version`</sub> |
+| <sub>pip</sub> | <sub>Latest</sub> | <sub>`pip --version`</sub> |
+| <sub>Git</sub> | <sub>Latest</sub> | <sub>`git --version`</sub> |
+| <sub>Docker (optional)</sub> | <sub>Latest</sub> | <sub>`docker --version`</sub> |
 
 ### Quick Start
 
@@ -725,35 +725,35 @@ pie title Project Completion by Phase
 
 ### Test Coverage
 
-| Module                           | Tests | Coverage | Status |
+| <sub>Module</sub> | <sub>Tests</sub> | <sub>Coverage</sub> | <sub>Status</sub> |
 | -------------------------------- | ----- | -------- | ------ |
-| `utils/timer.py`                 | 14    | 95%      | ✅      |
-| `utils/numpy_helpers.py`         | 24    | 100%     | ✅      |
-| `utils/pandas_helpers.py`        | 21    | 100%     | ✅      |
-| `utils/stats_helpers.py`         | 33    | 100%     | ✅      |
-| `utils/sklearn_helpers.py`       | 29    | 100%     | ✅      |
-| `utils/visualization_helpers.py` | 31    | 100%     | ✅      |
-| `ml_core/supervised.py`          | 15    | 100%     | ✅      |
-| `ml_core/unsupervised.py`        | 37    | 100%     | ✅      |
-| `ml_core/deep_learning.py`       | 42    | 100%     | ✅      |
-| `ml_core/nlp.py`                 | 53    | 100%     | ✅      |
-| `ml_core/computer_vision.py`     | 63    | 100%     | ✅      |
+| <sub>`utils/timer.py`</sub> | <sub>14</sub> | <sub>95%</sub> | <sub>✅</sub> |
+| <sub>`utils/numpy_helpers.py`</sub> | <sub>24</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`utils/pandas_helpers.py`</sub> | <sub>21</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`utils/stats_helpers.py`</sub> | <sub>33</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`utils/sklearn_helpers.py`</sub> | <sub>29</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`utils/visualization_helpers.py`</sub> | <sub>31</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`ml_core/supervised.py`</sub> | <sub>15</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`ml_core/unsupervised.py`</sub> | <sub>37</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`ml_core/deep_learning.py`</sub> | <sub>42</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`ml_core/nlp.py`</sub> | <sub>53</sub> | <sub>100%</sub> | <sub>✅</sub> |
+| <sub>`ml_core/computer_vision.py`</sub> | <sub>63</sub> | <sub>100%</sub> | <sub>✅</sub> |
 
 **Total Tests**: 362 passing ✅
 
 ### Recent Updates
 
-| Date       | Version | Changes                                                                     |
+| <sub>Date</sub> | <sub>Version</sub> | <sub>Changes</sub> |
 | ---------- | ------- | --------------------------------------------------------------------------- |
-| 2025-12-22 | v2.0.0  | 🎉 Phase 9: MLOps & Production (model serving, Docker, CI/CD, monitoring)    |
-| 2025-12-22 | v1.12.0 | Phase 8: End-to-End Projects (5 comprehensive ML projects)                  |
-| 2025-07-09 | v1.11.0 | Phase 7: Computer Vision (image fundamentals, CNN, detection, segmentation) |
-| 2025-07-08 | v1.10.0 | Phase 6: NLP (text preprocessing, embeddings, transformers)                 |
-| 2025-07-08 | v1.9.0  | Phase 5: Deep learning (PyTorch, CNN, RNN, training techniques)             |
-| 2025-07-08 | v1.8.0  | Phase 4: Unsupervised learning (clustering, PCA, anomaly detection)         |
-| 2025-07-08 | v1.7.0  | Phase 3: Supervised learning (regression, classification, SVM, boosting)    |
-| 2025-07-08 | v1.6.0  | Phase 2: Fundamentals complete (5 notebooks, helper modules)                |
-| 2025-07-08 | v1.0.0  | Initial project structure, Docker setup                                     |
+| <sub>2025-12-22</sub> | <sub>v2.0.0</sub> | <sub>🎉 Phase 9: MLOps & Production (model serving, Docker, CI/CD, monitoring)</sub> |
+| <sub>2025-12-22</sub> | <sub>v1.12.0</sub> | <sub>Phase 8: End-to-End Projects (5 comprehensive ML projects)</sub> |
+| <sub>2025-07-09</sub> | <sub>v1.11.0</sub> | <sub>Phase 7: Computer Vision (image fundamentals, CNN, detection, segmentation)</sub> |
+| <sub>2025-07-08</sub> | <sub>v1.10.0</sub> | <sub>Phase 6: NLP (text preprocessing, embeddings, transformers)</sub> |
+| <sub>2025-07-08</sub> | <sub>v1.9.0</sub> | <sub>Phase 5: Deep learning (PyTorch, CNN, RNN, training techniques)</sub> |
+| <sub>2025-07-08</sub> | <sub>v1.8.0</sub> | <sub>Phase 4: Unsupervised learning (clustering, PCA, anomaly detection)</sub> |
+| <sub>2025-07-08</sub> | <sub>v1.7.0</sub> | <sub>Phase 3: Supervised learning (regression, classification, SVM, boosting)</sub> |
+| <sub>2025-07-08</sub> | <sub>v1.6.0</sub> | <sub>Phase 2: Fundamentals complete (5 notebooks, helper modules)</sub> |
+| <sub>2025-07-08</sub> | <sub>v1.0.0</sub> | <sub>Initial project structure, Docker setup</sub> |
 
 ---
 
@@ -796,13 +796,13 @@ flowchart LR
 
 ### Documentation
 
-| Resource     | Link                                                 | Description      |
+| <sub>Resource</sub> | <sub>Link</sub> | <sub>Description</sub> |
 | ------------ | ---------------------------------------------------- | ---------------- |
-| NumPy        | [numpy.org](https://numpy.org/doc/)                  | Array computing  |
-| Pandas       | [pandas.pydata.org](https://pandas.pydata.org/docs/) | Data analysis    |
-| scikit-learn | [scikit-learn.org](https://scikit-learn.org/stable/) | Machine learning |
-| PyTorch      | [pytorch.org](https://pytorch.org/docs/)             | Deep learning    |
-| TensorFlow   | [tensorflow.org](https://www.tensorflow.org/guide)   | Deep learning    |
+| <sub>NumPy</sub> | <sub>[numpy.org](https://numpy.org/doc/)</sub> | <sub>Array computing</sub> |
+| <sub>Pandas</sub> | <sub>[pandas.pydata.org](https://pandas.pydata.org/docs/)</sub> | <sub>Data analysis</sub> |
+| <sub>scikit-learn</sub> | <sub>[scikit-learn.org](https://scikit-learn.org/stable/)</sub> | <sub>Machine learning</sub> |
+| <sub>PyTorch</sub> | <sub>[pytorch.org](https://pytorch.org/docs/)</sub> | <sub>Deep learning</sub> |
+| <sub>TensorFlow</sub> | <sub>[tensorflow.org](https://www.tensorflow.org/guide)</sub> | <sub>Deep learning</sub> |
 
 ### Learning Platforms
 
